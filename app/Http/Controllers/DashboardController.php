@@ -8,6 +8,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        dd('ini halaman dashboard');
+        return view('dashboard');
     }
 }
