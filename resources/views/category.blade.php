@@ -26,7 +26,7 @@
             <thead>
                 <th>No</th>
                 <th>Name</th>
-                <th>Action</th> 
+                <th>Action</th>
             </thead>
             <tbody>
                 @foreach ($categories as $item)
@@ -34,8 +34,8 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->name }}</td>
                         <td>
-                            <a href="category-edit/{{$item->slug}}">edit</a>
-                            <a href="category-delete/{{$item->slug}}">delete</a>
+                            <a href="/category-edit/{{$item->slug}}">edit</a>
+                            <a href="/category-delete/{{$item->slug}}">delete</a>
                         </td>
                     </tr>
                 @endforeach
