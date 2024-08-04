@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $category = Category::where('slug', $slug)->first();
         $category->slug = null;
         $category->update($request->all());
-        return redirect('categories')->with('status','Catgory Updated Successfully');
+        return redirect('categories')->with('status','Category Updated Successfully');
     }
 
     public function delete($slug)

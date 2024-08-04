@@ -13,15 +13,9 @@
     </div>
 
 
-    <div class="mt-5">
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
-        @endif
-    </div>
 
-    <div>
+
+    <div class="my-5">
         <table class="table">
             <thead>
                 <th>No</th>

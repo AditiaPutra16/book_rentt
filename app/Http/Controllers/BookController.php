@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
+
 class BookController extends Controller
 {
     public function index()
@@ -17,7 +18,7 @@ class BookController extends Controller
        return view('book-add');
     }
 
-    public function store(Request $request) {
+    public function store (Request $request) {
         $validated = $request->validate([
             'book_code' => 'required|unique:books|max:255',
             'title'=>  'required|max:255'
@@ -29,7 +30,7 @@ class BookController extends Controller
             $request->file('image')->storeAs('cover', $newName);
         }
             $request['cover'] = $newName;
-            $books = Book::create($request->all()); 
+            $books = Book::create($request->all());
             return redirect('books')->with('status','Book Added Successfully');
      }
 }
