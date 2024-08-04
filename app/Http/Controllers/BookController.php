@@ -15,6 +15,10 @@ class BookController extends Controller
         
     }
     public function add() {
-        dd('whatever');
+       return view('book-add');
     }
+
+    public function store(Request $request) {
+        dd($request->all());
+     }
 }
