@@ -52,7 +52,7 @@ class UserController extends Controller
     }
 
     public function bannedUser()
-    {
+    {               
         $bannedUsers = User::onlyTrashed()->get();
         return view('user-banned', ['bannedUsers' => $bannedUsers]);
     }
