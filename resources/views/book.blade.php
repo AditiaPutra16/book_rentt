@@ -3,10 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h1>Books List</h1>
+    <h1>
+        Books List
+    </h1>
 
     <div class="my-5 d-flex justify-content-end">
-        <a href="book-add" class="btn btn-primary">Add Data</a>
+        <a href="book-add" class="btn btn-primary me-3">Add Data</a>
+        <a href="book-deleted" class="btn btn-secondary">View Delete Category</a>
     </div>
 
     <div class="my-5">
