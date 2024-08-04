@@ -13,7 +13,7 @@
     </div>
 
 
-    <div class="mt-5">
+    <div class="my-5">
         @if (session('status'))
             <div class="alert alert-success">
                 {{ session('status')}}
