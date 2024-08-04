@@ -14,7 +14,10 @@
     <div class="main d-flex flex-column justify-content-between">
         <nav class="navbar navbar-dark navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Perpustakaan UAI</a>
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="{{asset('Logo-White.png')}}" alt="Logo" height="80" class="d-inline-block align-text-top me-5">
+                    <h2>Perpustakaan UAI</h2>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
