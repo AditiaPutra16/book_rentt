@@ -18,6 +18,7 @@ class BookController extends Controller
     }
 
     public function store(Request $request) {
-        dd($request->all());
+        $book = Book::create($request->all()); 
+        return redirect('book')->with('status','Book Added Successfully');
      }
 }
