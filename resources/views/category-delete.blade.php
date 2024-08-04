@@ -1,6 +1,6 @@
 @extends('layouts.mainlayouts')
 
-@section('title', 'Edit Category')
+@section('title', 'Delete Category')
 
 @section('content')
 
