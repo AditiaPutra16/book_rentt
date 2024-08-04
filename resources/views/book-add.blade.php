@@ -22,25 +22,25 @@
             @csrf
             <div class="mb-3">
                 <label for="code" class="form-label">Code</label>
-                <input type="text" name="book_code" id="code" class="form-control" 
-                placeholder="Book's Code" value="">
+
+                <input type="text" name="book_code" id="code" class="form-control" placeholder="Book's Code" value="{{old('book_code')}}">
             </div>
 
             <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="text" name="title" id="code" class="form-control" 
-              placeholder="Book's title" value="{{ old('username') }}">
-          </div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Book's title" value="{{old('title')}}">
+            </div>
 
-          <div>
-            <label for="Image" class="form-label">Image</label>
-            <input type="file" name="Image" class="form-control">
-        </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" name="image" class="form-control">
+            </div>
 
             <div class="mt-3">
                 <button class="btn btn-success" type="submit">Save</button>
             </div>
         </form>
     </div>
+
 
 @endsection
