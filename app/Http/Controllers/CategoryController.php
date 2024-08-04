@@ -50,14 +50,14 @@ class CategoryController extends Controller
     {
         $category = Category::where('slug', $slug)->first();
         return view('category-delete', ['category' => $category]);
-        
+
     }
 
     public function destroy($slug)
     {
         $category = Category::where('slug', $slug)->first();
         $category->delete();
-        return redirect('categories')->with('status','Category Deleted Successfully'); 
+        return redirect('categories')->with('status','Category Deleted Successfully');
     }
 
     public function deletedCategory()
@@ -70,6 +70,6 @@ class CategoryController extends Controller
     {
         $category = Category::withTrashed()->where('slug', $slug)->first();
         $category->restore();
-        return redirect('categories')->with('status','Category Restored Successfully'); 
+        return redirect('categories')->with('status','Category Restored Successfully');
     }
 }
