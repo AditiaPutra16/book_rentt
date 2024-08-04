@@ -22,17 +22,19 @@
             @csrf
             <div class="mb-3">
                 <label for="code" class="form-label">Code</label>
-                <input type="text" name="book_code" id="code" class="form-control" placeholder="Book's Code">
+                <input type="text" name="book_code" id="code" class="form-control" 
+                placeholder="Book's Code" value="">
             </div>
 
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" name="title" id="code" class="form-control" placeholder="Book's title">
+              <input type="text" name="title" id="code" class="form-control" 
+              placeholder="Book's title" value="{{ old('username') }}">
           </div>
 
           <div>
-            <label for="cover" class="form-label">Cover</label>
-            <input type="file" name="cover" class="form-control">
+            <label for="Image" class="form-label">Image</label>
+            <input type="file" name="Image" class="form-control">
         </div>
 
             <div class="mt-3">
