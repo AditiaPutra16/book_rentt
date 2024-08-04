@@ -3,11 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content')
+
     <h1>Books List</h1>
 
     <div class="my-5 d-flex justify-content-end">
         <a href="book-add" class="btn btn-primary">Add Data</a>
     </div>
+
 
     <div class="my-5">
         @if (session('status'))
@@ -31,10 +33,12 @@
             <tbody>
                 @foreach ($books as $item)
                 <tr>
+
                     <td>{{$loop->iteration}}</td>
                     <td>{{$item->book_code}}</td>
                     <td>{{$item->title}}</td>
                     <td>{{$item->status}}</td>
+
                     <td>
                         <a href="#">edit</a>
                         <a href="#">delete</a>
@@ -44,4 +48,6 @@
             </tbody>
         </table>
     </div>
+
 @endsection
+

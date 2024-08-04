@@ -36,5 +36,3 @@ class BookController extends Controller
 
         $book = Book::create($request->all());
         return redirect('books')->with('status','Book Added Successfully');
-    }
-}

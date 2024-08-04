@@ -22,6 +22,7 @@
             @csrf
             <div class="mb-3">
                 <label for="code" class="form-label">Code</label>
+
                 <input type="text" name="book_code" id="code" class="form-control" placeholder="Book's Code" value="{{old('book_code')}}">
             </div>
 
@@ -40,5 +41,6 @@
             </div>
         </form>
     </div>
+
 
 @endsection
