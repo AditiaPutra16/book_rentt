@@ -3,6 +3,7 @@
 @section('title', 'Users')
 
 @section('content')
+
     <h1>User List</h1>
 
     <div class="mt-5 d-flex justify-content-end">
@@ -40,3 +41,5 @@
             @endforeach
         </tbody>
 @endsection
+
+    
