@@ -43,11 +43,9 @@
                     </td>
                     <td>
                         <a href="/user-detail/{{$item->slug}}">detail</a>
-                        <a href="/user-ban/{{$item->slug}}">ban user</a>
+                        <a href="user-ban/{{$item->slug}}">ban user</a>
                     </td>
                 </tr>
             @endforeach
         </tbody>
 @endsection
-
-    

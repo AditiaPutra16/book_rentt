@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -38,13 +37,13 @@ class UserController extends Controller
         $user->save();
 
         return redirect('user-detail/'.$slug)->with('status','User Approved Successfully');
-
     }
 
     public function delete($slug)
     {
         $user = User::where('slug', $slug)->first();
-        return view('user-delete',['user' => $user]);
+        return view('user-delete', ['user' => $user]);
+
     }
 
     public function destroy($slug)
@@ -55,7 +54,8 @@ class UserController extends Controller
         return redirect('users')->with('status','User Deleted Successfully');
     }
 
-    public function bannedUsers()
+    public function bannedUser()
+
     {
         $bannedUsers = User::onlyTrashed()->get();
         return view('user-banned', ['bannedUsers' => $bannedUsers]);
@@ -65,7 +65,6 @@ class UserController extends Controller
     {
         $user = User::withTrashed()->where('slug', $slug)->first();
         $user->restore();
-
         return redirect('users')->with('status','User Restored Successfully');
     }
 

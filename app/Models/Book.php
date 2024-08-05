@@ -4,7 +4,6 @@ namespace App\Models;
 
 
 use App\Models\Category;
-
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
