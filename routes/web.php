@@ -72,7 +72,8 @@ Route::middleware('auth')->group(function() {
         Route::get('user-destroy/{slug}', [UserController::class, 'destroy']);
         Route::get('user-banned', [UserController::class, 'bannedUser']);
         Route::get('user-restore/{slug}', [UserController::class, 'restore']);
+        
+        Route::get('rent-logs', [RentLogController::class, 'index']);
     });
 
-    Route::get('rent-logs', [RentLogController::class, 'index']);
 });
