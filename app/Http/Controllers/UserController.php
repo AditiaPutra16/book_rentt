@@ -39,4 +39,18 @@ class UserController extends Controller
         return redirect('user-detail/'.$slug)->with('status','User Approved Successfully');
     }
 
+    public function delete($slug)
+    {
+        $user = User::where('slug', $slug)->first();
+        return view('user-delete', ['user' => $user]);
+    }
+
+    public function destroy($slug)
+    {
+        $user = User::where('slug', $slug)->first();
+        $user->delete();
+
+        return redirect('users')->with('status','User Deleted Successfully');
+    }
+
 }
