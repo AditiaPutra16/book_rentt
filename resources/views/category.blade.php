@@ -12,16 +12,7 @@
         <a href="category-deleted" class="btn btn-secondary">View Delete Category</a>
     </div>
 
-
     <div class="my-5">
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
-        @endif
-    </div>
-
-    <div>
         <table class="table">
             <thead>
                 <tr>

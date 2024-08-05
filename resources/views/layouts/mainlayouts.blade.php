@@ -36,7 +36,6 @@
                             <a href="/rent-logs" @if(request()->route()->uri == 'rent-logs') class='active' @endif>Rent Log</a>
                             <a href="/" @if(request()->route()->uri == '/') class='active' @endif>book-list</a>
                             <a href="/logout" @if(request()->route()->uri == 'logout') class='active' @endif>Logout</a>
-
                         @else
                             <a href="/profile" @if(request()->route()->uri == 'profile') class='active' @endif>Profile</a>
                             <a href="/" @if(request()->route()->uri == '/') class='active' @endif>book-list</a>

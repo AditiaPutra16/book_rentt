@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function() {
     Route::get('profile', [UserController::class, 'profile'])->middleware('only_client');
 
 
+
     Route::middleware('only_admin')->group(function() {
         Route::get('dashboard', [DashboardController::class, 'index']);
 

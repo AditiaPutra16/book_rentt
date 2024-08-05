@@ -43,6 +43,7 @@ class UserController extends Controller
     {
         $user = User::where('slug', $slug)->first();
         return view('user-delete', ['user' => $user]);
+
     }
 
     public function destroy($slug)
@@ -54,6 +55,7 @@ class UserController extends Controller
     }
 
     public function bannedUser()
+
     {
         $bannedUsers = User::onlyTrashed()->get();
         return view('user-banned', ['bannedUsers' => $bannedUsers]);
