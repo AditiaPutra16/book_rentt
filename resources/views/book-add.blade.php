@@ -24,6 +24,7 @@
             @csrf
             <div class="mb-3">
                 <label for="code" class="form-label">Code</label>
+
                 <input type="text" name="book_code" id="code" class="form-control" placeholder="Book's Code" value="{{old('book_code')}}">
             </div>
 
@@ -52,6 +53,7 @@
         </form>
     </div>
 
+
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
@@ -59,4 +61,5 @@
         $('.select-multiple').select2();
     });
 </script>
+
 @endsection
