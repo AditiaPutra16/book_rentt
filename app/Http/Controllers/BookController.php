@@ -6,6 +6,7 @@ use App\Models\Book;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+
 class BookController extends Controller
 {
     public function index()
@@ -22,6 +23,7 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'book_code' => 'required|unique:books|max:255',
             'title' => 'required|max:255',

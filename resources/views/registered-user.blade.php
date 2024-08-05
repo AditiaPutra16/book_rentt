@@ -39,4 +39,5 @@
                 @endforeach
         </tbody>
     </div>
+
 @endsection
