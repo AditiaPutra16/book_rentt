@@ -27,7 +27,6 @@
         <div class="body-content h-100">
             <div class="row g-0 h-100">
                 <div class="sidebar col-lg-2 collapse d-lg-block" id="navbarTogglerDemo03">
-<<<<<<< HEAD
                     @if (Auth::user()->role_id ==1)
                     <a href="dashboard" @if(request()->route()->uri == 'dashboard') class='active' @endif>Dashboard</a>
                     <a href="books" @if(request()->route()->uri == 'books') class='active' @endif>Books</a>
@@ -35,17 +34,6 @@
                     <a href="users" @if(request()->route()->uri == 'users' ||request()->route()->uri == 'registered-users' || request()->route()->uri == 'user-ban/{slug}'|| request()->route()->uri == 'user-detail/{slug}') class='active' @endif>Users</a>
                     <a href="rent-logs" @if(request()->route()->uri == 'rent-logs') class='active' @endif>Rent Log</a>
                     <a href="logout" @if(request()->route()->uri == 'logout') class='active' @endif>Logout</a>
-=======
-                    @if (Auth::user())
-                        @if (Auth::user()->role_id ==1)
-                            <a href="/dashboard" @if(request()->route()->uri == 'dashboard') class='active' @endif>Dashboard</a>
-                            <a href="/books" @if(request()->route()->uri == 'books' || request()->route()->uri == 'book-add' || request()->route()->uri == 'book-delete' || request()->route()->uri == 'book-delete' || request()->route()->uri == 'book-edit/{slug}' || request()->route()->uri == 'book-delete/{slug}') class='active' @endif>Books</a>
-                            <a href="/categories" @if(request()->route()->uri == 'categories' || request()->route()->uri == 'category-add' || request()->route()->uri == 'category-delete' || request()->route()->uri == 'category-delete' || request()->route()->uri == 'category-edit/{slug}' || request()->route()->uri == 'category-delete/{slug}') class='active' @endif>Categories</a>
-                            <a href="/users" @if(request()->route()->uri == 'users' || request()->route()->uri == 'registered-users' || request()->route()->uri == 'user-detail/{slug}'|| request()->route()->uri == 'user-banned' ||  request()->route()->uri == 'user-ban/{slug}') class='active' @endif>Users</a>
-                            <a href="/rent-logs" @if(request()->route()->uri == 'rent-logs') class='active' @endif>Rent Log</a>
-                            <a href="/" @if(request()->route()->uri == '/') class='active' @endif>book-list</a>
-                            <a href="/logout" @if(request()->route()->uri == 'logout') class='active' @endif>Logout</a>
->>>>>>> 257d765d0e0ae22662c9207727a31e1309234c92
 
                         @else
                             <a href="/profile" @if(request()->route()->uri == 'profile') class='active' @endif>Profile</a>

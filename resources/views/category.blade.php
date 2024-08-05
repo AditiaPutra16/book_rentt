@@ -12,19 +12,6 @@
         <a href="category-deleted" class="btn btn-secondary">View Delete Category</a>
     </div>
 
-
-<<<<<<< HEAD
-=======
-    <div class="my-5">
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
-        @endif
-    </div>
->>>>>>> 257d765d0e0ae22662c9207727a31e1309234c92
-
-
     <div class="my-5">
         <table class="table">
             <thead>
