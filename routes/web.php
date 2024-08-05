@@ -65,7 +65,6 @@ Route::middleware('auth')->group(function() {
         Route::get('category-restore/{slug}', [CategoryController::class, 'restore']);
 
 
-<<<<<<< HEAD
         Route::get('users', [UserController::class, 'index']);
         Route::get('registered-users', [UserController::class, 'registeredUser']);
         Route::get('user-detail/{slug}', [UserController::class, 'show']);
@@ -76,15 +75,5 @@ Route::middleware('auth')->group(function() {
         Route::get('user-restore/{slug}', [UserController::class, 'restore']);
     });
 
-=======
-    Route::get('users', [UserController::class, 'index']);
-    Route::get('registered-users', [UserController::class, 'registeredUser']);
-    Route::get('user-detail/{slug}', [UserController::class, 'show']);
-    Route::get('user-approve/{slug}', [UserController::class, 'approve']);
-    Route::get('user-ban/{slug}', [UserController::class, 'delete']);
-    Route::get('user-destroy/{slug}', [UserController::class, 'destroy']);
-    Route::get('user-banned', [UserController::class, 'bannedUser']);
-    
->>>>>>> d5c2d4655458f07917911f5768251e0eb24e9c83
     Route::get('rent-logs', [RentLogController::class, 'index']);
 });
