@@ -53,4 +53,17 @@ class UserController extends Controller
         return redirect('users')->with('status','User Deleted Successfully');
     }
 
+    public function bannedUser()
+    {
+        $bannedUsers = User::onlyTrashed()->get();
+        return view('user-banned', ['bannedUsers' => $bannedUsers]);
+    }
+
+    public function restore($slug)
+    {
+        $user = User::withTrashed()->where('slug', $slug)->first();
+        $user->restore();
+        return redirect('users')->with('status','User Restored Successfully');
+    }
+
 }
