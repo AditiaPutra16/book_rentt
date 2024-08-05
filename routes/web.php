@@ -46,6 +46,12 @@ Route::middleware('auth')->group(function() {
         Route::get('books', [BookController::class, 'index']);
         Route::get('book-add', [BookController::class, 'add']);
         Route::post('book-add', [BookController::class, 'store']);
+        Route::get('book-edit/{slug}', [BookController::class, 'edit']);
+        Route::post('book-edit/{slug}', [BookController::class, 'update']);
+        Route::get('book-delete/{slug}', [BookController::class, 'delete']);
+        Route::get('book-destroy/{slug}', [BookController::class, 'destroy']);
+        Route::get('book-deleted', [BookController::class, 'deletedBook']);
+        Route::get('book-restore/{slug}', [BookController::class, 'restore']);
 
         Route::get('categories', [CategoryController::class, 'index']);
         Route::get('category-add', [CategoryController::class, 'add']);
@@ -59,6 +65,14 @@ Route::middleware('auth')->group(function() {
 
 
         Route::get('users', [UserController::class, 'index']);
+        Route::get('registered-users', [UserController::class, 'registeredUser']);
+        Route::get('user-detail/{slug}', [UserController::class, 'show']);
+        Route::get('user-approve/{slug}', [UserController::class, 'approve']);
+        Route::get('user-ban/{slug}', [UserController::class, 'delete']);
+        Route::get('user-destroy/{slug}', [UserController::class, 'destroy']);
+        Route::get('user-banned', [UserController::class, 'bannedUser']);
+        Route::get('user-restore/{slug}', [UserController::class, 'restore']);
     });
+
     Route::get('rent-logs', [RentLogController::class, 'index']);
 });

@@ -24,9 +24,11 @@
     <div>
         <table class="table">
             <thead>
-                <th>No</th>
-                <th>Name</th>
-                <th>Action</th>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach ($categories as $item)
